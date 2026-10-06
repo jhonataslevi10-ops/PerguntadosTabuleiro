@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Baralho Quizito</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="app">
+<header>
+<svg id="mascote" viewBox="0 0 100 100" role="img" aria-label="Quizito, o mascote">
+<path d="M30 22 L36 6 L44 20 L50 2 L56 20 L64 6 L70 22Z" fill="#ff7a1a" stroke="#2b1a5e" stroke-width="3" stroke-linejoin="round"/>
+<ellipse cx="50" cy="60" rx="38" ry="34" fill="#ffc83d" stroke="#2b1a5e" stroke-width="3.5"/>
+<ellipse cx="36" cy="50" rx="11" ry="13" fill="#fff" stroke="#2b1a5e" stroke-width="3"/>
+<ellipse cx="64" cy="50" rx="11" ry="13" fill="#fff" stroke="#2b1a5e" stroke-width="3"/>
+<circle id="olhoE" cx="38" cy="52" r="5" fill="#2b1a5e"/>
+<circle id="olhoD" cx="62" cy="52" r="5" fill="#2b1a5e"/>
+<path id="boca" d="M36 72 Q50 84 64 72" fill="none" stroke="#2b1a5e" stroke-width="4" stroke-linecap="round"/>
+<circle cx="22" cy="68" r="5" fill="#ff8fa3" opacity=".7"/><circle cx="78" cy="68" r="5" fill="#ff8fa3" opacity=".7"/>
+<circle cx="84" cy="22" r="14" fill="#7a5cc9" stroke="#2b1a5e" stroke-width="3"/>
+<text x="84" y="29" font-size="20" font-weight="900" fill="#fff" text-anchor="middle">?</text>
+</svg>
+<img id="mascoteImg" alt="Mascote">
+<div><h1>BARALHO QUIZITO</h1><div class="balao" id="fala">Escolha uma categoria e vamos jogar!</div></div>
+</header>
+
+<!-- Opção para ligar/desligar Bíblia -->
+<label class="toggle" for="toggleBiblia">
+<input type="checkbox" id="toggleBiblia" checked>
+<span>Incluir perguntas sobre a Bíblia</span>
+</label>
+
+<!-- Secção da Roleta -->
+<div class="area-roleta">
+<div class="roleta-wrapper">
+<div class="roleta-ponteiro"></div>
+<canvas id="canvasRoleta" width="240" height="240"></canvas>
+</div>
+<button type="button" class="acao prim btn-girar" id="btnGirar">Girar Roleta!</button>
+</div>
+
+<section id="t1" class="grade"></section>
+
+<section id="t2" class="tela">
+<span class="tag" id="tagCat2"></span>
+<p style="font-weight:800;text-align:center">Qual nível da carta?</p>
+<div class="niveis">
+<button class="nivel" data-d="e" style="background:#2fb866"><b>1</b>Fácil</button>
+<button class="nivel" data-d="m" style="background:#f2a100"><b>2</b>Médio</button>
+<button class="nivel" data-d="h" style="background:#e5484d"><b>3</b>Difícil</button>
+</div>
+<button class="acao sec" style="width:100%" id="voltar">← Categorias</button>
+</section>
+
+<section id="t3" class="tela">
+<span class="tag" id="tagCat3"></span><span class="tag" id="tagNivel" style="background:#7a5cc9"></span>
+<div class="pergunta" id="pergunta"></div>
+<div class="ops" id="ops"></div>
+<div id="aviso" aria-live="polite"></div>
+<div class="botoes">
+<button class="acao prim" id="outra" style="display:none">Outra carta</button>
+<button class="acao sec" id="proximo" style="display:none">Próximo jogador</button>
+</div>
+</section>
+</main>
+
+<script src="perguntas.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
