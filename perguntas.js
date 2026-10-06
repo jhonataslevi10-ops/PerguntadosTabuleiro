@@ -1,5 +1,4 @@
-// Baralho de perguntas. Formato: "pergunta|certa|errada 1|errada 2|errada 3"
-// Distribuição por categoria: 100 fáceis (e), 60 médias (m), 40 difíceis (h) = 200 no total.
+// Baralho verificado. Formato: "pergunta|certa|errada 1|errada 2|errada 3"
 var BARALHO = {
   his: {
     e: [
@@ -61,7 +60,7 @@ var BARALHO = {
       "Como eram chamados os guerreiros nobres da elite militar do Japão feudal?|Samurais|Ninjas|Shoguns|Ronins",
       "Em que ano acabou a Primeira Guerra Mundial?|1918|1914|1939|1945",
       "Qual foi a civilização que inventou o alfabeto fonético que influenciou os gregos?|Fenícios|Egípcios|Persas|Babilônios",
-      "Qual imperador romano converteu-se ao cristianismo e fundou Constantinopla?|Constantino|Augusto|Nero|Júlio César",
+      "Qual imperador romano se converteu ao cristianismo e escolheu Bizâncio como nova capital?|Constantino|Augusto|Nero|Júlio César",
       "Qual líder cubano liderou a guerrilha ao lado de Fidel Castro e morreu na Bolívia?|Che Guevara|Camilo Cienfuegos|Raúl Castro|Hugo Chávez",
       "Qual líder francês liderou a Resistência Francesa na Segunda Guerra Mundial?|Charles de Gaulle|Philippe Pétain|Georges Clemenceau|François Mitterrand",
       "Qual povo bárbaro do norte da Europa ficou famoso por navegar em drácares?|Vikings|Visigodos|Hunos|Vândalos",
@@ -100,9 +99,22 @@ var BARALHO = {
       "Qual rei inglês rompeu com a Igreja Católica e fundou a Igreja Anglicana?|Henrique VIII|Henrique VII|Ricardo Coração de Leão|Carlos I",
       "Em que ano os portugueses chegaram ao Japão pela primeira vez?|1543|1500|1492|1600",
       "Qual líder pacifista inspirou o movimento pelos direitos civis ao usar o boicote a ônibus em Montgomery?|Rosa Parks|Angela Davis|Harriet Tubman|Sojourner Truth",
-      "Qual foi o movimento cultural de renascimento das artes e ciências na Europa entre os séculos XIV e XVI?|Renascimento|Iluminismo|Barroco|Romantismo",
       "Qual era a capital do Império Asteca quando os espanhóis chegaram?|Tenochtitlán|Teotihuacán|Tikal|Chichén Itzá",
-      "Qual foi o imperador romano que construiu a famosa muralha defensiva no norte da Britânia?|Adriano|Trajano|Marco Aurélio|Cláudio"
+      "Qual foi o imperador romano que construiu a famosa muralha defensiva no norte da Britânia?|Adriano|Trajano|Marco Aurélio|Cláudio",
+      "Qual imperador francês foi exilado na ilha de Santa Helena?|Napoleão Bonaparte|Luís XVI|Carlos Magno|Robespierre",
+      "Qual país lançou o primeiro homem ao espaço, em 1961?|União Soviética|Estados Unidos|China|Alemanha",
+      "Qual navio levou Charles Darwin em sua viagem pelo mundo?|HMS Beagle|Mayflower|Santa Maria|Endeavour",
+      "Qual conflito ocorreu entre 1939 e 1945?|Segunda Guerra Mundial|Primeira Guerra Mundial|Guerra Fria|Guerra do Vietnã",
+      "Qual civilização antiga escrevia com hieróglifos?|Egípcia|Grega|Romana|Fenícia",
+      "Qual foi o primeiro imperador do Brasil?|Dom Pedro I|Dom Pedro II|Dom João VI|Deodoro da Fonseca",
+      "Qual navegador português chegou à Índia por mar em 1498?|Vasco da Gama|Pedro Álvares Cabral|Bartolomeu Dias|Fernão de Magalhães",
+      "Qual doença matou milhões de europeus na Idade Média, conhecida como Peste Negra?|Peste bubônica|Varíola|Tuberculose|Gripe",
+      "Qual povo dominou grande parte da Península Ibérica por mais de setecentos anos, a partir de 711?|Mouros|Vikings|Hunos|Gauleses",
+      "Qual rei francês foi guilhotinado em 1793?|Luís XVI|Luís XIV|Napoleão|Carlos X",
+      "Qual civilização ergueu cidades como Chichén Itzá?|Maias|Incas|Astecas|Olmecas",
+      "Qual guerra opôs o Norte e o Sul dos Estados Unidos no século XIX?|Guerra de Secessão|Guerra Fria|Guerra da Independência|Guerra do Vietnã",
+      "Qual rainha inglesa ficou conhecida como a Rainha Virgem?|Elizabeth I|Vitória|Maria Stuart|Ana Bolena",
+      "Qual presidente governou o Brasil de 1930 a 1945?|Getúlio Vargas|Juscelino Kubitschek|Eurico Dutra|Jânio Quadros"
     ],
     m: [
       "Em que ano começou a Primeira Guerra Mundial?|1914|1918|1939|1905",
@@ -164,7 +176,18 @@ var BARALHO = {
       "Qual imperador romano oficializou o Cristianismo como religião exclusiva do Império em 380?|Teodósio I|Constantino|Juliano|Diocleciano",
       "Qual conflito bélico de guerrilha na selva durou de 1955 a 1975 envolvendo os EUA na Ásia?|Guerra do Vietnã|Guerra da Coreia|Guerra Sino-Indiana|Guerra do Camboja",
       "Qual presidente do Brasil renunciou inesperadamente ao cargo após 7 meses em 1961?|Jânio Quadros|João Goulart|Juscelino Kubitschek|Café Filho",
-      "Qual país foi palco do surgimento do movimento fascista fundado por Benito Mussolini?|Itália|Espanha|Portugal|Alemanha"
+      "Qual país foi palco do surgimento do movimento fascista fundado por Benito Mussolini?|Itália|Espanha|Portugal|Alemanha",
+      "Qual explorador italiano contou suas viagens à China no século XIII?|Marco Polo|Américo Vespúcio|Cristóvão Colombo|Giovanni Caboto",
+      "Qual país europeu foi dividido em Ocidental e Oriental após a Segunda Guerra?|Alemanha|França|Polônia|Áustria",
+      "Qual movimento popular pediu eleições diretas para presidente no Brasil em 1984?|Diretas Já|Caras Pintadas|Tropicália|Inconfidência",
+      "Qual frota espanhola foi derrotada pela Inglaterra em 1588?|Invencível Armada|Armada Real|Santa Liga|Frota do Tesouro",
+      "Qual presidente brasileiro lançou o Plano de Metas, com a ideia de cinquenta anos em cinco?|Juscelino Kubitschek|Getúlio Vargas|Jânio Quadros|Café Filho",
+      "Qual explorador chegou ao Polo Sul em 1911?|Roald Amundsen|Robert Scott|Ernest Shackleton|Edmund Hillary",
+      "Qual líder fundou a República da Turquia depois do fim do Império Otomano?|Mustafa Kemal Atatürk|Saladino|Solimão|Mehmed II",
+      "Qual cidade foi capital do Brasil até 1960?|Rio de Janeiro|Salvador|São Paulo|Recife",
+      "Quem foi assassinado em 1914, o que levou à Primeira Guerra Mundial?|Arquiduque Francisco Ferdinando|Kaiser Guilherme II|Czar Nicolau II|Rei Alberto I",
+      "Qual líder proclamou a República Popular da China em 1949?|Mao Tsé-Tung|Sun Yat-sen|Deng Xiaoping|Chiang Kai-shek",
+      "Qual país viveu a Revolução dos Cravos, em 1974?|Portugal|Espanha|Grécia|Itália"
     ],
     h: [
       "Qual tratado encerrou a Guerra dos Trinta Anos em 1648?|Paz de Vestfália|Tratado de Versalhes|Tratado de Utrecht|Tratado de Tordesilhas",
@@ -193,7 +216,7 @@ var BARALHO = {
       "Qual documento constitucional britânico de 1689 consolidou a monarquia parlamentar após a Revolução Gloriosa?|Bill of Rights|Magna Carta|Petition of Right|Instrument of Government",
       "Qual rei da Prússia transformou o reino em potência militar e venceu a Guerra dos Sete Anos?|Frederico II (o Grande)|Frederico Guilherme I|Guilherme I|Frederico III",
       "Qual presidente do Brasil promulgou o Ato Institucional Número 5 (AI-5) em dezembro de 1968?|Costa e Silva|Castelo Branco|Médici|Geisel",
-      "Qual foi a primeira colônia penal britânica estabelecida na Austrália em 1788?|Baía de Botany|Port Jackson|Melbourne|Brisbane",
+      "Em qual porto os britânicos fundaram, em 1788, a primeira colônia penal na Austrália?|Port Jackson (Sydney)|Baía de Botany|Melbourne|Brisbane",
       "Qual foi a revolta separatista ocorrida em Pernambuco em 1817 contra a corte portuguesa no Brasil?|Revolução Pernambucana|Confederação do Equador|Revolta dos Alfaiates|Sabinada",
       "Qual dinastia governou o Império Russo de 1613 até a abdicação em 1917?|Romanov|Ruríquida|Habsburgo|Hohenzollern",
       "Qual rainha guerreira da tribo dos Icênios liderou uma revolta brutal contra a ocupação romana na Britânia?|Boudica|Cartimandua|Zenóbia|Cleópatra",
@@ -206,7 +229,12 @@ var BARALHO = {
       "Qual almirante japonês planejou o ataque a Pearl Harbor e comandou a frota em Midway?|Isoroku Yamamoto|Heihachiro Togo|Chuichi Nagumo|Tomoyuki Yamashita",
       "Qual diplomata austríaco presidiu o Congresso de Viena em 1814-1815 reorganizando as fronteiras europeias?|Klemens von Metternich|Talleyrand|Castlereagh|Hardenberg",
       "Qual imperador bizantino enfrentou a Revolta de Nika em Constantinopla em 532 apoiado pela imperatriz Teodora?|Justiniano I|Anastácio I|Focas|Maurício",
-      "Qual foi a revolta de marinheiros na Rússia czarista em 1905 no Mar Negro imortalizada no cinema?|Couraçado Potemkin|Revolta de Kronstadt|Cruzador Aurora|Revolta de Sebastopol"
+      "Qual foi a revolta de marinheiros na Rússia czarista em 1905 no Mar Negro imortalizada no cinema?|Couraçado Potemkin|Revolta de Kronstadt|Cruzador Aurora|Revolta de Sebastopol",
+      "Qual faraó tentou impor o culto a um único deus, Aton?|Akhenaton|Ramsés II|Tutancâmon|Quéops",
+      "Qual guerra entre Inglaterra e França durou de 1337 a 1453?|Guerra dos Cem Anos|Guerra das Rosas|Guerra dos Trinta Anos|Guerra de Troia",
+      "Qual faraó mandou construir os templos de Abu Simbel?|Ramsés II|Tutmés III|Quéops|Akhenaton",
+      "Como foi chamado o período de execuções em massa na Revolução Francesa, liderado por Robespierre?|Regime do Terror|Diretório|Consulado|Restauração",
+      "Qual cidade sediou a conferência de 1943 entre Roosevelt, Churchill e Stálin?|Teerã|Yalta|Potsdam|Casablanca"
     ]
   },
   cie: {
@@ -299,7 +327,7 @@ var BARALHO = {
       "Qual é o nome do aparelho auditivo usado pelos médicos para auscultar batimentos cardíacos?|Estetoscópio|Termômetro|Otoscópio|Tensiómetro",
       "Qual é a árvore de cuja seiva se extrai o látex para fazer borracha natural?|Seringueira|Araucária|Ipê|Jatobá",
       "Como se chama a camada de ar que envolve o planeta Terra?|Atmosfera|Litosfera|Hidrosfera|Biosfera",
-      "Quantos dias aproximadamente a Lua leva para completar suas quatro fases principais?|28 dias|7 dias|14 dias|365 dias",
+      "Aproximadamente quantos dias dura um ciclo completo de fases da Lua?|29 dias|7 dias|15 dias|365 dias",
       "Qual é o menor número primo existente na matemática?|2|1|3|0",
       "Qual vitamina é produzida na pele humana pela exposição segura à luz solar?|Vitamina D|Vitamina C|Vitamina K|Vitamina E",
       "Qual fenômeno natural luminoso ocorre quando relâmpagos cortam o céu durante tempestades?|Raio|Trovão|Granizo|Tornado",
@@ -310,7 +338,19 @@ var BARALHO = {
       "Qual é o planeta do Sistema Solar conhecido por ser o mais distante do Sol?|Netuno|Urano|Plutão|Saturno",
       "Qual animal artrópode marinho tem dez patas e anda frequentemente de lado?|Caranguejo|Estrela-do-mar|Polvo|Água-viva",
       "O que mede uma balança comum em termos físicos do dia a dia?|Massa|Volume|Temperatura|Comprimento",
-      "Qual é o órgão humano responsável pelo paladar?|Língua|Nariz|Garganta|Dente"
+      "Qual é o órgão humano responsável pelo paladar?|Língua|Nariz|Garganta|Dente",
+      "Como se chama a passagem da água do estado líquido para vapor?|Evaporação|Condensação|Congelamento|Sublimação",
+      "Qual fonte de energia vem diretamente do Sol?|Energia solar|Energia eólica|Energia nuclear|Energia geotérmica",
+      "Qual é a cor da clorofila das plantas?|Verde|Vermelha|Amarela|Azul",
+      "Quantas pernas tem um inseto?|6|8|4|10",
+      "Qual metal um ímã atrai com mais facilidade?|Ferro|Ouro|Alumínio|Cobre",
+      "Qual sentido está ligado à língua?|Paladar|Olfato|Tato|Audição",
+      "Qual é a estrela mais brilhante do céu noturno, depois do Sol?|Sirius|Polaris|Betelgeuse|Vega",
+      "Qual planeta tem a Grande Mancha Vermelha?|Júpiter|Saturno|Netuno|Urano",
+      "Quantos dias tem um ano bissexto?|366|365|364|367",
+      "Qual é a unidade de medida de distância no Sistema Internacional?|Metro|Litro|Grama|Segundo",
+      "Qual instrumento mede a pressão atmosférica?|Barômetro|Termômetro|Higrômetro|Anemômetro",
+      "Qual é o maior planeta rochoso do Sistema Solar?|Terra|Vênus|Marte|Mercúrio"
     ],
     m: [
       "Qual organela é a usina de energia da célula?|Mitocôndria|Ribossomo|Lisossomo|Complexo de Golgi",
@@ -372,7 +412,16 @@ var BARALHO = {
       "Qual é a fórmula molecular do gás ozônio presente na estratosfera?|O3|O2|CO2|CH4",
       "Qual foi o primeiro elemento químico artificialmente produzido e sintetizado na história?|Tecnécio|Plutônio|Netúnio|Polônio",
       "Qual tipo de tecido biológico transporta a seiva bruta (água e sais minerais) nas plantas vasculares?|Xilema|Floema|Parênquima|Câmbio",
-      "Qual propriedade dos fluidos mede a sua resistência interna ao escoamento?|Viscosidade|Tensão superficial|Densidade|Elasticidade"
+      "Qual propriedade dos fluidos mede a sua resistência interna ao escoamento?|Viscosidade|Tensão superficial|Densidade|Elasticidade",
+      "Quem descobriu a radioatividade em 1896?|Henri Becquerel|Albert Einstein|Niels Bohr|Galileu Galilei",
+      "Qual é a função dos cloroplastos nas células vegetais?|Realizar a fotossíntese|Produzir energia na respiração|Armazenar água|Dividir a célula",
+      "Qual é o maior órgão interno do corpo humano?|Fígado|Pulmão|Coração|Baço",
+      "Como se chama a circulação da água entre mar, ar e terra?|Ciclo da água|Ciclo do carbono|Ciclo do nitrogênio|Ciclo de Krebs",
+      "Qual vitamina previne o escorbuto?|Vitamina C|Vitamina D|Vitamina A|Vitamina K",
+      "Qual instrumento permite observar células e microrganismos?|Microscópio|Telescópio|Periscópio|Estetoscópio",
+      "Em qual camada da atmosfera acontecem as nuvens e o clima?|Troposfera|Estratosfera|Mesosfera|Exosfera",
+      "Qual é a unidade de potência no Sistema Internacional?|Watt|Joule|Newton|Volt",
+      "Qual cientista propôs a teoria heliocêntrica no século XVI?|Nicolau Copérnico|Galileu Galilei|Johannes Kepler|Ptolomeu"
     ],
     h: [
       "Qual partícula mediadora transmite a força nuclear forte?|Glúon|Fóton|Bóson W|Gráviton",
@@ -395,10 +444,10 @@ var BARALHO = {
       "Qual ácido nucléico transporta os aminoácidos até o ribossomo durante a tradução proteica?|RNA transportador|RNA mensageiro|RNA ribossômico|DNA polimerase",
       "Qual constante fundamental relaciona a energia de um fóton à sua frequência (E = h*f)?|Constante de Planck|Constante de Boltzmann|Constante de Coulomb|Constante de Rydberg",
       "Qual cientista polonesa ganhou dois prêmios Nobel em áreas científicas distintas (Física e Química)?|Marie Curie|Lise Meitner|Rosalind Franklin|Irène Joliot-Curie",
-      "Qual é a teoria que unifica a gravidade geral e os efeitos da gravitação em escala cosmológica?|Relatividade Geral|Mecânica Quântica|Eletrodinâmica Quântica|Cromodinâmica Quântica",
+      "Qual teoria de Einstein descreve a gravidade como curvatura do espaço-tempo?|Relatividade Geral|Mecânica Quântica|Eletrodinâmica Quântica|Cromodinâmica Quântica",
       "Qual é o tipo de decaimento radioativo que emite um núcleo idêntico ao do hélio-4?|Decaimento Alfa|Decaimento Beta+|Decaimento Beta-|Radiação Gama",
       "Qual enzima é responsável por desenrolar e abrir a dupla hélice de DNA na replicação celular?|Helicase|Ligase|DNA polimerase|Topoisomerase",
-      "Qual metal de transição tem o maior ponto de fusão entre todos os elementos da tabela periódica?|Tungstênio|Ósmio|Platina|Titânio",
+      "Qual metal de transição tem o maior ponto de fusão entre todos os metais?|Tungstênio|Ósmio|Platina|Titânio",
       "Qual é o único par de elementos da tabela periódica líquidos sob condições normais de temperatura e pressão?|Mercúrio e Bromo|Mercúrio e Frâncio|Bromo e Gálio|Césio e Cloro",
       "Em qual organela celular ocorre a fase do ciclo de Krebs na respiração celular eucariótica?|Matriz mitocondrial|Cristas mitocondriais|Citoplasma|Complexo de Golgi",
       "Qual cientista estabeleceu as quatro equações fundamentais que unificaram eletricidade e magnetismo?|James Clerk Maxwell|Michael Faraday|André-Marie Ampère|Carl Friedrich Gauss",
@@ -413,7 +462,13 @@ var BARALHO = {
       "Qual é o principal pigmento fotossintetizante acessório que dá a cor alaranjada em plantas?|Betacaroteno|Luteína|Antocianina|Ficobilina",
       "Qual elemento químico radioativo natural foi batizado em homenagem ao planeta Urano?|Urânio|Netúnio|Plutônio|Tório",
       "Qual fase da mitose caracteriza-se pelo alinhamento dos cromossomos no plano equatorial da célula?|Metáfase|Prófase|Anáfase|Telófase",
-      "Qual lei física postula que o volume de um gás ideal é inversamente proporcional à pressão sob temperatura constante?|Lei de Boyle-Mariotte|Lei de Charles|Lei de Gay-Lussac|Lei de Avogadro"
+      "Qual lei física postula que o volume de um gás ideal é inversamente proporcional à pressão sob temperatura constante?|Lei de Boyle-Mariotte|Lei de Charles|Lei de Gay-Lussac|Lei de Avogadro",
+      "Qual é o símbolo químico do potássio?|K|P|Po|Pt",
+      "Quem criou a primeira tabela periódica organizada, em 1869?|Dmitri Mendeleev|Antoine Lavoisier|John Dalton|Niels Bohr",
+      "Quem desenvolveu a primeira vacina, contra a varíola?|Edward Jenner|Louis Pasteur|Robert Koch|Jonas Salk",
+      "Qual partícula foi detectada no CERN em 2012 e está ligada à massa das outras?|Bóson de Higgs|Glúon|Fóton|Quark",
+      "Quem descobriu as quatro maiores luas de Júpiter, em 1610?|Galileu Galilei|Johannes Kepler|Nicolau Copérnico|Edmund Halley",
+      "Qual lei relaciona tensão, corrente e resistência elétrica?|Lei de Ohm|Lei de Hooke|Lei de Coulomb|Lei de Faraday"
     ]
   },
   geo: {
@@ -454,9 +509,9 @@ var BARALHO = {
       "Qual é a capital dos Estados Unidos?|Washington, D.C.|Nova York|Los Angeles|Chicago",
       "Qual país tem o formato geográfico semelhante a uma bota no mapa da Europa?|Itália|Espanha|Grécia|Portugal",
       "Qual é a capital do Japão?|Tóquio|Quioto|Osaka|Hiroshima",
-      "Qual é o país mais populoso do mundo atualmente ao lado da China?|Índia|Estados Unidos|Indonésia|Rússia",
+      "Qual país superou a China e passou a ser o mais populoso do mundo em 2023?|Índia|Estados Unidos|Indonésia|Rússia",
       "Qual canal artificial interliga o Mar Mediterrâneo ao Mar Vermelho?|Canal de Suez|Canal do Panamá|Canal da Mancha|Canal de Corinto",
-      "Qual é a capital do estado de São Paulo?|São Paulo|Campinas|Santos|Ribeirão Preto",
+      "Qual é a cidade mais populosa do Brasil?|São Paulo|Rio de Janeiro|Brasília|Salvador",
       "Qual país da América do Sul tem duas capitais oficiais (La Paz e Sucre)?|Bolívia|Paraguai|Equador|Peru",
       "Qual é a capital do Uruguai?|Montevidéu|Punta del Este|Colônia|Salto",
       "Qual é o maior arquipélago insular do mundo formado por mais de 17 mil ilhas?|Indonésia|Filipinas|Japão|Maldivas",
@@ -514,26 +569,36 @@ var BARALHO = {
       "Qual é a capital do estado do Ceará no Brasil?|Fortaleza|Sobral|Juazeiro do Norte|Caucaia",
       "Qual é o hemisfério da Terra situado a leste do Meridiano de Greenwich?|Hemisfério Oriental|Hemisfério Ocidental|Hemisfério Boreal|Hemisfério Austral",
       "Qual é a capital da Suíça?|Berna|Zurique|Genebra|Basileia",
-      "Qual é a maior planície alagável contínua do planeta, situada no centro-oeste brasileiro?|Pantanal|Chaco|Llanos|Everglades"
+      "Qual é a maior planície alagável contínua do planeta, situada no centro-oeste brasileiro?|Pantanal|Chaco|Llanos|Everglades",
+      "Qual é a capital da Venezuela?|Caracas|Bogotá|Quito|Lima",
+      "Em qual país fica a cidade de Nova York?|Estados Unidos|Canadá|Reino Unido|Austrália",
+      "Qual é a capital de Pernambuco?|Recife|Olinda|Fortaleza|Natal",
+      "Qual é o maior país da América do Norte em área?|Canadá|México|Estados Unidos|Cuba",
+      "Qual é a capital de Minas Gerais?|Belo Horizonte|Uberlândia|Juiz de Fora|Ouro Preto",
+      "Qual é a capital do Paraná?|Curitiba|Londrina|Maringá|Foz do Iguaçu",
+      "Qual é a capital de Santa Catarina?|Florianópolis|Joinville|Blumenau|Itajaí",
+      "Qual é a capital de Goiás?|Goiânia|Anápolis|Palmas|Uberlândia",
+      "Qual é a capital do Pará?|Belém|Manaus|Santarém|Macapá",
+      "Qual é a capital do Amazonas?|Manaus|Belém|Porto Velho|Boa Vista",
+      "Qual é a capital de Mato Grosso?|Cuiabá|Campo Grande|Goiânia|Porto Velho",
+      "Qual é a capital de Mato Grosso do Sul?|Campo Grande|Cuiabá|Dourados|Goiânia",
+      "Qual é a capital do Maranhão?|São Luís|Teresina|Belém|Fortaleza",
+      "Qual é a capital do Piauí?|Teresina|São Luís|Fortaleza|Natal",
+      "Qual é a capital do Rio Grande do Norte?|Natal|João Pessoa|Recife|Mossoró",
+      "Qual é a capital da Paraíba?|João Pessoa|Campina Grande|Natal|Recife"
     ],
     m: [
       "Qual é a capital da Austrália?|Camberra|Sydney|Melbourne|Brisbane",
       "Qual é o maior rio do mundo em volume de água?|Rio Amazonas|Rio Nilo|Rio Yangtzé|Rio Mississippi",
       "Qual é o menor país do mundo?|Vaticano|Mônaco|San Marino|Malta",
-      "Qual é a capital do Canadá?|Ottawa|Toronto|Vancouver|Montreal",
       "Qual rio atravessa Paris?|Rio Sena|Rio Tâmisa|Rio Reno|Rio Danúbio",
       "Qual é a montanha mais alta do mundo?|Monte Everest|K2|Kilimanjaro|Aconcágua",
       "Qual país europeu tem formato de bota?|Itália|Grécia|Portugal|Espanha",
-      "Qual é a capital do Japão?|Tóquio|Quioto|Osaka|Seul",
       "Qual é a capital do Egito?|Cairo|Alexandria|Luxor|Gizé",
       "Qual estreito separa a Europa da África?|Estreito de Gibraltar|Estreito de Bering|Estreito de Magalhães|Canal da Mancha",
       "Qual é a maior ilha do mundo?|Groenlândia|Madagascar|Bornéu|Nova Guiné",
-      "Qual é a capital da Alemanha?|Berlim|Munique|Frankfurt|Hamburgo",
-      "Qual é a capital da Rússia?|Moscou|São Petersburgo|Kiev|Minsk",
-      "Qual é a capital da Colômbia?|Bogotá|Medellín|Quito|Lima",
       "Qual país tem a maior costa marítima do mundo?|Canadá|Rússia|Austrália|Indonésia",
       "Qual é o menor estado do Brasil em área?|Sergipe|Alagoas|Rio de Janeiro|Espírito Santo",
-      "Qual é a capital da Suíça?|Berna|Zurique|Genebra|Basileia",
       "Qual é a capital da Índia?|Nova Délhi|Mumbai|Calcutá|Bangalore",
       "Qual canal liga os oceanos Atlântico e Pacífico na América Central?|Canal do Panamá|Canal de Suez|Canal da Mancha|Canal de Corinto",
       "Qual deserto sul-americano é um dos mais áridos do mundo?|Atacama|Saara|Gobi|Kalahari",
@@ -576,7 +641,17 @@ var BARALHO = {
       "Qual estado brasileiro tem o maior número de municípios do país (853 municípios)?|Minas Gerais|São Paulo|Bahia|Rio Grande do Sul",
       "Qual é a capital da Tailândia?|Bangcoc|Chiang Mai|Phuket|Pattaya",
       "Qual cordilheira europeia abriga o Mont Blanc em sua parte mais elevada?|Alpes|Pireneus|Cárpatos|Apeninos",
-      "Qual é o país sul-americano onde fica a cachoeira mais alta do mundo (Salto Ángel)?|Venezuela|Colômbia|Brasil|Guiana"
+      "Qual é o país sul-americano onde fica a cachoeira mais alta do mundo (Salto Ángel)?|Venezuela|Colômbia|Brasil|Guiana",
+      "Qual é a capital da China?|Pequim|Xangai|Hong Kong|Cantão",
+      "Qual é o maior deserto do mundo, contando as regiões polares?|Antártida|Saara|Gobi|Atacama",
+      "Qual estreito separa a América do Sul da Terra do Fogo?|Estreito de Magalhães|Estreito de Bering|Estreito de Gibraltar|Canal da Mancha",
+      "Qual é a capital de Cuba?|Havana|Santiago de Cuba|Kingston|Santo Domingo",
+      "Qual é a capital da Irlanda?|Dublin|Belfast|Cork|Edimburgo",
+      "Qual é o maior lago da África em área?|Lago Vitória|Lago Tanganica|Lago Niassa|Lago Chade",
+      "Qual cadeia de montanhas separa a Europa da Ásia, na Rússia?|Montes Urais|Cáucaso|Alpes|Cárpatos",
+      "Qual é o maior país da América Central em área?|Nicarágua|Guatemala|Honduras|Panamá",
+      "Qual mar banha a costa leste da Itália?|Mar Adriático|Mar Egeu|Mar Negro|Mar Cáspio",
+      "Qual é a capital do Irã?|Teerã|Bagdá|Riad|Cabul"
     ],
     h: [
       "Qual é o ponto mais alto da África?|Monte Kilimanjaro|Monte Quênia|Monte Ruwenzori|Montes Atlas",
@@ -592,7 +667,6 @@ var BARALHO = {
       "Qual é o maior país do mundo sem litoral?|Cazaquistão|Mongólia|Bolívia|Etiópia",
       "Qual é o rio mais longo da Ásia?|Yangtzé|Rio Amarelo|Mekong|Ganges",
       "Qual é a capital da Islândia?|Reykjavik|Oslo|Helsinque|Estocolmo",
-      "Qual país do mundo possui o maior número de ilhas naturais em seu território?|Suécia|Finlândia|Canadá|Indonésia",
       "Qual é a capital do Azerbaijão, situada na costa do Mar Cáspio?|Baku|Tbilisi|Yerevan|Astana",
       "Qual estreito separa a ilha de Madagascar da costa oriental da África?|Canal de Moçambique|Canal de Zanzibar|Estreito de Comores|Canal da Somália",
       "Qual é a capital da Mongólia?|Ulan Bator|Erdenet|Darkhan|Altai",
@@ -608,7 +682,6 @@ var BARALHO = {
       "Qual é o pico montanhoso mais alto da Europa Ocidental localizado na cordilheira dos Alpes?|Mont Blanc|Matterhorn|Monte Rosa|Jungfrau",
       "Qual é a capital da Jordânia?|Amã|Aqaba|Zarqa|Irbid",
       "Qual país do Cáucaso tem Tbilisi como sua capital?|Geórgia|Armênia|Azerbaijão|Moldávia",
-      "Qual é o maior arquipélago em território nacional da Europa Continental banhado pelo Báltico?|Arquipélago de Estocolmo|Ilhas Aland|Ilhas Faroé|Ilhas Baleares",
       "Qual rio chinês é historicamente conhecido como o Rio Amarelo?|Huang He|Chang Jiang|Xi Jiang|Mekong",
       "Qual é a capital de Mianmar desde sua transferência em 2005?|Naypyidaw|Yangon|Mandalay|Bagan",
       "Qual é a depressão terrestre mais profunda da América do Sul situada na Argentina?|Laguna del Carbón|Vale da Lua|Depressão de Chaco|Salina Grande",
@@ -618,7 +691,13 @@ var BARALHO = {
       "Qual estreito separa a ilha de Vanua Levu da ilha de Viti Levu no Pacífico Sul?|Passagem de Bligh|Estreito de Cook|Estreito de Torres|Estreito de Bass",
       "Qual é a capital do Uzbequistão na Ásia Central?|Tashkent|Samarcanda|Bucara|Nukus",
       "Qual país do continente africano tem três capitais oficiais (administrativa, legislativa e judiciária)?|África do Sul|Nigéria|Benin|Costa do Marfim",
-      "Qual é a capital do Iêmen no sul da Península Arábica?|Sana|Aden|Taiz|Al Mukalla"
+      "Qual é a capital do Iêmen no sul da Península Arábica?|Sana|Aden|Taiz|Al Mukalla",
+      "Qual é a capital do Quênia?|Nairóbi|Mombaça|Kampala|Adis Abeba",
+      "Qual é a capital da Etiópia?|Adis Abeba|Nairóbi|Cartum|Mogadíscio",
+      "Qual cidade é a capital constitucional da Bolívia?|Sucre|La Paz|Santa Cruz|Cochabamba",
+      "Qual é o país mais populoso da Ásia Central?|Uzbequistão|Cazaquistão|Turcomenistão|Quirguistão",
+      "Qual é a capital do Paquistão?|Islamabad|Karachi|Lahore|Cabul",
+      "Qual é o maior estado dos Estados Unidos em área?|Alasca|Texas|Califórnia|Montana"
     ]
   },
   esp: {
@@ -686,7 +765,6 @@ var BARALHO = {
       "Qual tenista espanhol ficou conhecido como o Rei do Saibro por seus títulos em Roland Garros?|Rafael Nadal|Carlos Alcaraz|David Ferrer|Carlos Moyá",
       "Qual modalidade esportiva envolve correr, nadar e pedalar na mesma prova?|Triatlo|Pentatlo|Decatlo|Biatlo",
       "Qual país conquistou o tetracampeonato mundial de futebol na Copa do Mundo de 2014 no Brasil?|Alemanha|Argentina|Holanda|Brasil",
-      "Qual jogador brasileiro foi o grande astro e artilheiro da Copa do Mundo de 2002?|Ronaldo Fenômeno|Rivaldo|Ronaldinho Gaúcho|Kaká",
       "Qual é o objetivo principal do futebol: fazer a bola entrar onde?|No gol (baliza)|Na cesta|Na rede|No buraco",
       "Qual esporte usa um disco plano de borracha chamado puck em vez de uma bola?|Hóquei no gelo|Polo aquático|Futebol de salão|Críquete",
       "Qual ginasta brasileira foi campeã olímpica e mundial no solo com o 'Baile de Favela'?|Rebeca Andrade|Daiane dos Santos|Daniele Hypolito|Flávia Saraiva",
@@ -705,7 +783,7 @@ var BARALHO = {
       "Qual esporte de corrida de cavalos com jóqueis é tradicional em hipódromos?|Turfe|Polo|Adestramento|Hipismo rural",
       "Quantos pontos vale um gol normal no futebol de campo?|1|2|3|6",
       "Em que país nasceu o futebol gaélico?|Irlanda|Escócia|Inglaterra|País de Gales",
-      "Qual tenista sérvio ultrapassou a marca de 24 títulos de Grand Slam na era moderna?|Novak Djokovic|Roger Federer|Rafael Nadal|Daniil Medvedev",
+      "Qual tenista sérvio chegou a 24 títulos de Grand Slam em 2023?|Novak Djokovic|Roger Federer|Rafael Nadal|Daniil Medvedev",
       "Qual seleção nacional de rúgbi é mundialmente famosa por apresentar o Haka antes dos jogos?|Nova Zelândia (All Blacks)|Austrália|África do Sul|Inglaterra",
       "Qual é a grande premiação anual da revista France Football dada ao melhor jogador do mundo?|Bola de Ouro (Ballon d'Or)|Chuteira de Ouro|The Best|Troféu Yashin",
       "Qual jogador brasileiro foi eleito o melhor do mundo pela FIFA em 2007 atuando pelo Milan?|Kaká|Ronaldinho Gaúcho|Rivaldo|Adriano Imperador",
@@ -714,7 +792,6 @@ var BARALHO = {
       "Qual seleção foi a campeã da Copa do Mundo de 1998 jogando em casa?|França|Brasil|Croácia|Alemanha",
       "Qual piloto brasileiro foi o primeiro campeão mundial de Fórmula 1 do país em 1972?|Emerson Fittipaldi|Nelson Piquet|Ayrton Senna|José Carlos Pace",
       "Em qual esporte de montanha os praticantes utilizam cordas, mosquetões e sapatilhas especiais?|Escalada|Ciclismo downhill|Trekking|Esqui",
-      "Qual é a cor tradicional da faixa preta nas artes marciais orientais?|Preta|Vermelha|Marrom|Dourada",
       "Qual torneio sul-americano de clubes de futebol equivale à Champions League europeia?|Copa Libertadores da América|Copa Sul-Americana|Recopa|Copa Mercosul",
       "Qual atleta norte-americana de ginástica artística é dona de dezenas de medalhas olímpicas e mundiais?|Simone Biles|Gabby Douglas|Aly Raisman|Sunisa Lee",
       "Qual é a luta japonesa em que dois lutadores pesados tentam empurrar um ao outro para fora do círculo?|Sumô|Judô|Aikido|Jiu-jitsu",
@@ -722,7 +799,18 @@ var BARALHO = {
       "Qual piloto holandês conquistou múltiplos títulos mundiais consecutivos na Fórmula 1 pela Red Bull?|Max Verstappen|Lewis Hamilton|Charles Leclerc|Lando Norris",
       "Qual é o tempo limite padrão para um arremesso no basquete da NBA?|24 segundos|30 segundos|14 segundos|20 segundos",
       "Qual esporte de inverno consiste em arremessar pedras de granito polido sobre o gelo e varrer a pista?|Curling|Bobsled|Skeleton|Luge",
-      "Em qual esporte se destacou a jogadora brasileira Marta, eleita seis vezes melhor do mundo?|Futebol|Vôlei|Basquete|Handebol"
+      "Em qual esporte se destacou a jogadora brasileira Marta, eleita seis vezes melhor do mundo?|Futebol|Vôlei|Basquete|Handebol",
+      "Qual esporte tem como grande final o Super Bowl?|Futebol americano|Beisebol|Basquete|Hóquei",
+      "Em qual esporte existem as posições de goleiro, zagueiro e atacante?|Futebol|Tênis|Natação|Atletismo",
+      "Qual é a cor tradicional da bola de tênis em Wimbledon?|Amarela|Branca|Verde|Laranja",
+      "Quantas bases tem um campo de beisebol, contando a casa?|4|3|5|6",
+      "Qual esporte de inverno usa uma prancha presa aos pés para descer a neve?|Snowboard|Surfe|Patinação|Trenó",
+      "Qual esporte combina natação, ciclismo e corrida?|Triatlo|Pentatlo|Decatlo|Biatlo",
+      "Qual clube brasileiro é conhecido como Galo?|Atlético Mineiro|Cruzeiro|América Mineiro|Botafogo",
+      "Qual clube brasileiro é conhecido como Peixe?|Santos|Palmeiras|Vasco|Botafogo",
+      "Qual é o torneio de clubes mais importante da Europa?|Liga dos Campeões|Libertadores|Copa do Brasil|Eurocopa",
+      "Qual seleção de rúgbi é famosa por dançar o haka antes dos jogos?|Nova Zelândia|Austrália|África do Sul|Fiji",
+      "Qual clube brasileiro é conhecido como Colorado?|Internacional|Grêmio|Sport|Fluminense"
     ],
     m: [
       "Quem venceu a primeira Copa do Mundo, em 1930?|Uruguai|Brasil|Argentina|Itália",
@@ -746,8 +834,8 @@ var BARALHO = {
       "Qual jogador é conhecido pelo apelido CR7?|Cristiano Ronaldo|Cafu|Casemiro|Cuca",
       "Qual ginasta brasileira ganhou ouro no solo nas Olimpíadas de Paris 2024?|Rebeca Andrade|Daiane dos Santos|Flávia Saraiva|Jade Barbosa",
       "Qual seleção venceu a Copa do Mundo de 2006 na Alemanha?|Itália|França|Alemanha|Brasil",
-      "Qual ciclista venceu 5 edições do Tour de France nos anos 90 antes da era do doping moderno?|Miguel Induráin|Eddy Merckx|Bernard Hinault|Lance Armstrong",
-      "Qual tenista venceu o Grand Slam de Roland Garros em sua estreia em 1997 sendo brasileiro?|Gustavo Kuerten|Fernando Meligeni|Luiz Mattar|Thomaz Bellucci",
+      "Qual ciclista espanhol venceu cinco edições seguidas do Tour de France, de 1991 a 1995?|Miguel Induráin|Lance Armstrong|Bernard Hinault|Eddy Merckx",
+      "Qual tenista brasileiro venceu Roland Garros pela primeira vez em 1997?|Gustavo Kuerten|Fernando Meligeni|Luiz Mattar|Thomaz Bellucci",
       "Quantos metros mede uma pista oficial de atletismo em sua raia interna número 1?|400 metros|500 metros|300 metros|450 metros",
       "Qual equipe tem mais títulos conquistados na história do campeonato de construtores da Fórmula 1?|Ferrari|McLaren|Mercedes|Williams",
       "Quantos pontos vale um try no rúgbi moderno?|5 pontos|3 pontos|6 pontos|4 pontos",
@@ -782,9 +870,18 @@ var BARALHO = {
       "Qual atleta brasileira do salto em distância conquistou a medalha de ouro olímpica em Pequim 2008?|Maurren Maggi|Fabiana Murer|Silvana Tirinzoni|Keila Costa",
       "Qual técnico comandou a Seleção Brasileira na conquista do pentacampeonato mundial em 2002?|Luiz Felipe Scolari|Mário Zagallo|Carlos Alberto Parreira|Tite",
       "Qual foi a primeira cidade da América do Sul a sediar os Jogos Olímpicos da era moderna?|Rio de Janeiro|Buenos Aires|Santiago|São Paulo",
-      "Qual fundista etíope venceu duas medalhas de ouro olímpicas consecutivas na maratona correndo descalço em 1960?|Abebe Bikila|Haile Gebrselassie|Kenenisa Bekele|Eliud Kipchoge",
+      "Qual maratonista etíope venceu a maratona olímpica de 1960 correndo descalço?|Abebe Bikila|Haile Gebrselassie|Kenenisa Bekele|Eliud Kipchoge",
       "Qual país conquistou o título da Copa do Mundo de futebol masculino de 1978 disputada em casa?|Argentina|Holanda|Brasil|Itália",
-      "Qual equipe britânica da Fórmula 1 dominou a categoria nos anos 80 com Alain Prost e Ayrton Senna?|McLaren|Williams|Ferrari|Lotus"
+      "Qual equipe britânica da Fórmula 1 dominou a categoria nos anos 80 com Alain Prost e Ayrton Senna?|McLaren|Williams|Ferrari|Lotus",
+      "Qual brasileiro foi eleito duas vezes melhor do mundo pela FIFA em 2004 e 2005?|Ronaldinho Gaúcho|Kaká|Neymar|Rivaldo",
+      "Qual país tem mais títulos olímpicos de verão na história?|Estados Unidos|China|Alemanha|Reino Unido",
+      "Em qual estádio foi disputada a final da Copa do Mundo de 1950?|Maracanã|São Januário|Morumbi|Mineirão",
+      "Qual esporte foi inventado por James Naismith em 1891?|Basquete|Vôlei|Handebol|Beisebol",
+      "Qual esporte foi inventado por William Morgan em 1895?|Vôlei|Basquete|Tênis|Squash",
+      "Qual país venceu a Copa América de 2019, disputada em casa?|Brasil|Argentina|Chile|Uruguai",
+      "Em qual esporte se disputa a Copa Davis?|Tênis|Golfe|Críquete|Vôlei",
+      "Qual cidade sediou os Jogos Olímpicos de 1980?|Moscou|Los Angeles|Montreal|Seul",
+      "Qual clube venceu a primeira Copa Libertadores, em 1960?|Peñarol|Santos|Boca Juniors|River Plate"
     ],
     h: [
       "Em que ano foram os primeiros Jogos Olímpicos da era moderna?|1896|1900|1904|1892",
@@ -802,7 +899,7 @@ var BARALHO = {
       "Em qual país nasceu o sumô?|Japão|China|Coreia do Sul|Mongólia",
       "Qual jogador francês marcou dois gols de cabeça na final da Copa do Mundo de 1998 contra o Brasil?|Zinedine Zidane|Thierry Henry|Didier Deschamps|Michel Platini",
       "Qual velocista afro-americano conquistou 4 medalhas de ouro nos Jogos Olímpicos de Berlim em 1936?|Jesse Owens|Carl Lewis|Bob Beamon|Tommie Smith",
-      "Quem é o maior artilheiro da história das Copas do Mundo masculinas da FIFA com 16 gols?|Miroslav Klose|Ronaldo Fenômeno|Gerd Müller|Just Fontaine",
+      "Quem era o recordista de gols em Copas do Mundo antes da Copa de 2026, com 16 gols?|Miroslav Klose|Ronaldo Fenômeno|Gerd Müller|Pelé",
       "Qual jogador marcou o maior número de gols em uma única edição de Copa do Mundo (13 gols em 1958)?|Just Fontaine|Sandor Kocsis|Gerd Müller|Eusébio",
       "Em que cidade foram realizados os trágicos Jogos Olímpicos de 1972 marcados pelo atentado contra atletas israelenses?|Munique|Montreal|Helsinque|Cidade do México",
       "Qual fundista queniano quebrou a barreira das duas horas na maratona em um evento experimental em Viena em 2019?|Eliud Kipchoge|Kelvin Kiptum|Kenenisa Bekele|Paul Tergat",
@@ -826,7 +923,14 @@ var BARALHO = {
       "Qual foi a primeira ginasta a receber uma nota dez perfeita na história dos Jogos Olímpicos em Montreal 1976?|Nadia Comaneci|Nellie Kim|Olga Korbut|Mary Lou Retton",
       "Qual tenista é o recordista absoluto de títulos masculinos em simples em torneios de Wimbledon com 8 conquistas?|Roger Federer|Pete Sampras|Novak Djokovic|Björn Borg",
       "Qual atleta norte-americano estabeleceu o incrível recorde mundial de 8,90 metros no salto em distância em 1968?|Bob Beamon|Carl Lewis|Mike Powell|Jesse Owens",
-      "Qual time italiano conquistou três títulos da Copa da Europa/Champions League consecutivas nos anos 60 ou 70 com Arrigo Sacchi no fim dos 80?|Milan|Inter de Milão|Juventus|Roma"
+      "Qual time italiano venceu a Copa da Europa duas vezes seguidas, em 1989 e 1990, sob Arrigo Sacchi?|Milan|Inter de Milão|Juventus|Roma",
+      "Qual seleção venceu a Copa do Mundo de 1966, disputada em casa?|Inglaterra|Alemanha Ocidental|Brasil|Portugal",
+      "Qual esporte tem o torneio Masters, disputado em Augusta?|Golfe|Tênis|Críquete|Hipismo",
+      "Qual cidade sediou os Jogos Olímpicos de 2004?|Atenas|Salônica|Esparta|Olímpia",
+      "Qual esporte tem o Torneio das Seis Nações?|Rúgbi|Futebol|Críquete|Hóquei",
+      "Qual país sediou a Copa do Mundo de 1970, vencida pelo Brasil?|México|Chile|Argentina|Espanha",
+      "Qual seleção venceu a Copa do Mundo de 1974?|Alemanha Ocidental|Holanda|Brasil|Polônia",
+      "Qual seleção ficou conhecida como Laranja Mecânica nos anos 70?|Holanda|Alemanha|Itália|Bélgica"
     ]
   },
   art: {
@@ -888,7 +992,6 @@ var BARALHO = {
       "Como se chama o tipo de texto teatral escrito em versos com rimas cômicas no Nordeste?|Cordel|Repente|Epopéia|Haikai",
       "Qual monumento de Paris foi desenhado para a Exposição Universal de 1889 pelo engenheiro Gustave Eiffel?|Torre Eiffel|Arco do Triunfo|Catedral de Notre-Dame|Sainte-Chapelle",
       "Quem pintou o quadro modernista brasileiro 'Abaporu'?|Tarsila do Amaral|Anita Malfatti|Di Cavalcanti|Cândido Portinari",
-      "Qual instrumento de percussão pequeno em formato de triângulo de metal é tradicional no forró?|Triângulo|Pandeiro|Agogô|Chocalho",
       "Qual escritor britânico criou o universo da Terra Média em 'O Senhor dos Anéis'?|J. R. R. Tolkien|C. S. Lewis|George R. R. Martin|Arthur Conan Doyle",
       "Qual é o estilo arquitetônico medieval caracterizado por arcos pontiagudos e vitrais coloridos?|Gótico|Românico|Barroco|Clássico",
       "Quem escreveu o clássico da literatura brasileira 'Vidas Secas'?|Graciliano Ramos|José Lins do Rego|Rachel de Queiroz|Jorge Amado",
@@ -930,7 +1033,19 @@ var BARALHO = {
       "Qual escritor brasileiro escreveu a comédia folclórica 'O Pagador de Promessas'?|Dias Gomes|Nelson Rodrigues|Ariano Suassuna|Gianfrancesco Guarnieri",
       "Qual arquiteto suíço-francês é um dos principais expoentes da arquitetura moderna e do funcionalismo?|Le Corbusier|Frank Gehry|Mies van der Rohe|Walter Gropius",
       "Qual pintor renascentista espanhol de origem grega pintou 'O Enterro do Conde de Orgaz'?|El Greco|Diego Velázquez|Francisco Goya|Bartolomé Murillo",
-      "Quem escreveu o romance histórico francês 'O Conde de Monte Cristo'?|Alexandre Dumas|Victor Hugo|Júlio Verne|Honoré de Balzac"
+      "Quem escreveu o romance histórico francês 'O Conde de Monte Cristo'?|Alexandre Dumas|Victor Hugo|Júlio Verne|Honoré de Balzac",
+      "Qual instrumento de dez cordas é símbolo da música sertaneja de raiz?|Viola caipira|Cavaquinho|Violoncelo|Ukulele",
+      "Qual dança é típica do Havaí?|Hula|Samba|Tango|Flamenco",
+      "Qual instrumento de teclas e tubos é muito usado em igrejas?|Órgão|Violino|Flauta|Bateria",
+      "Qual cor surge ao misturar vermelho e azul?|Roxo|Verde|Laranja|Marrom",
+      "Quem escreveu Alice no País das Maravilhas?|Lewis Carroll|Charles Dickens|Mark Twain|Oscar Wilde",
+      "Qual instrumento de sopro tem um tubo com furos e é tocado com os dedos?|Flauta|Trombone|Tuba|Tambor",
+      "Como se chama a escrita em pontos em relevo usada por cegos?|Braille|Hieróglifos|Cuneiforme|Código Morse",
+      "Qual personagem de Monteiro Lobato é uma boneca de pano falante?|Emília|Narizinho|Cuca|Tia Nastácia",
+      "Quem escreveu O Menino Maluquinho?|Ziraldo|Mauricio de Sousa|Monteiro Lobato|Ruth Rocha",
+      "Qual instrumento de sopro é símbolo da Escócia?|Gaita de foles|Flauta|Trombone|Tuba",
+      "Como se chama a técnica de recortar e colar imagens para criar uma obra?|Colagem|Mosaico|Gravura|Escultura",
+      "Qual pequeno instrumento de quatro cordas é típico do Havaí?|Ukulele|Violino|Banjo|Harpa"
     ],
     m: [
       "A que movimento pertence O Grito, de Edvard Munch?|Expressionismo|Impressionismo|Cubismo|Surrealismo",
@@ -992,7 +1107,14 @@ var BARALHO = {
       "Qual escritor russo escreveu o romance psicológico 'Crime e Castigo'?|Fiódor Dostoiévski|Liev Tolstói|Ivan Turgueniev|Nikolai Gogol",
       "Qual arquiteto catalão projetou o Parque Güell e a Casa Batlló em Barcelona?|Antoni Gaudí|Lluís Domènech i Montaner|Josep Puig i Cadafalch|Santiago Calatrava",
       "Quem escreveu a poesia abolicionista 'O Navio Negreiro' na terceira geração romântica brasileira?|Castro Alves|Fagundes Varela|Casimiro de Abreu|Álvares de Azevedo",
-      "Qual artista plástico brasileiro criou os 'Parangolés' e o conceito de 'Tropicália'?|Hélio Oiticica|Lygia Clark|Cildo Meireles|Artur Barrio"
+      "Qual artista plástico brasileiro criou os 'Parangolés' e o conceito de 'Tropicália'?|Hélio Oiticica|Lygia Clark|Cildo Meireles|Artur Barrio",
+      "Quem escreveu A Divina Comédia?|Dante Alighieri|Homero|Virgílio|Luís de Camões",
+      "Quem compôs a Quinta Sinfonia, famosa pelos quatro primeiros acordes?|Beethoven|Mozart|Haydn|Brahms",
+      "Quem compôs a ópera O Guarani?|Carlos Gomes|Villa-Lobos|Chiquinha Gonzaga|Ernesto Nazareth",
+      "Quem compôs as Bachianas Brasileiras?|Heitor Villa-Lobos|Carlos Gomes|Tom Jobim|Ernesto Nazareth",
+      "Quem compôs Para Elisa?|Beethoven|Mozart|Chopin|Liszt",
+      "Quem pintou Impressão, Nascer do Sol?|Claude Monet|Edgar Degas|Édouard Manet|Pierre-Auguste Renoir",
+      "Quem escreveu O Primo Basílio?|Eça de Queirós|Machado de Assis|Camilo Castelo Branco|José Saramago"
     ],
     h: [
       "Quem projetou a cúpula da Catedral de Florença?|Filippo Brunelleschi|Donato Bramante|Bernini|Donatello",
@@ -1019,7 +1141,7 @@ var BARALHO = {
       "Qual artista dadaísta francês chocou o mundo da arte ao expor um mictório intitulado 'A Fonte' em 1917?|Marcel Duchamp|Francis Picabia|Man Ray|Jean Arp",
       "Qual compositor barroco compôs a gigantesca obra sacra 'Paixão segundo São Mateus'?|Johann Sebastian Bach|Heinrich Schütz|Claudio Monteverdi|Dieterich Buxtehude",
       "Qual escritor francês escreveu a imensa série de sete romances 'Em Busca do Tempo Perdido'?|Marcel Proust|André Gide|Louis-Ferdinand Céline|Paul Valéry",
-      "Qual pintor holandês do século XVII pintou o magnífico afresco 'A Lição de Anatomia do Dr. Nicolaes Tulp'?|Rembrandt|Frans Hals|Jan Steen|Gerard van Honthorst",
+      "Qual pintor holandês do século XVII pintou a famosa pintura a óleo 'A Lição de Anatomia do Dr. Nicolaes Tulp'?|Rembrandt|Frans Hals|Jan Steen|Gerard van Honthorst",
       "Qual compositor austríaco do Romantismo tardio compôs a grandiosa 'Sinfonia dos Mil' (Sinfonia nº 8)?|Gustav Mahler|Anton Bruckner|Richard Strauss|Franz Liszt",
       "Qual arquiteto renascentista projetou a planta original da Basílica de São Pedro em cruz grega?|Donato Bramante|Michelangelo|Raffaello Sanzio|Carlo Maderno",
       "Qual dramaturgo norueguês escreveu 'Casa de Bonecas' e 'Um Inimigo do Povo'?|Henrik Ibsen|August Strindberg|Bjørnstjerne Bjørnson|Knut Hamsun",
@@ -1034,7 +1156,11 @@ var BARALHO = {
       "Qual autor russo escreveu o romance 'O Mestre e Margarida' satirizando a burocracia soviética?|Mikhail Bulgákov|Boris Pasternak|Aleksandr Solzhenitsyn|Iuri Olesha",
       "Qual pintor italiano do Renascimento veneziano pintou 'A Assunção da Virgem' e 'Vênus de Urbino'?|Ticiano|Tintoretto|Paolo Veronese|Giorgione",
       "Qual poeta modernista norte-americano naturalizado britânico escreveu o poema 'The Waste Land' (A Terra Devastada)?|T. S. Eliot|Ezra Pound|W. H. Auden|William Carlos Williams",
-      "Qual arquiteto finno-americano projetou o terminal da TWA no aeroporto JFK e o Gateway Arch em St. Louis?|Eero Saarinen|Alvar Aalto|Louis Kahn|I. M. Pei"
+      "Qual arquiteto finno-americano projetou o terminal da TWA no aeroporto JFK e o Gateway Arch em St. Louis?|Eero Saarinen|Alvar Aalto|Louis Kahn|I. M. Pei",
+      "Qual pintor espanhol criou a série Pinturas Negras?|Francisco Goya|Diego Velázquez|El Greco|Murillo",
+      "Qual movimento foi definido por André Breton em um manifesto de 1924?|Surrealismo|Dadaísmo|Futurismo|Cubismo",
+      "Qual arquiteta ítalo-brasileira projetou o MASP, em São Paulo?|Lina Bo Bardi|Zaha Hadid|Lúcio Costa|Carmen Portinho",
+      "Qual compositor russo escreveu O Quebra-Nozes?|Tchaikovsky|Rachmaninoff|Stravinsky|Prokofiev"
     ]
   },
   ent: {
@@ -1058,7 +1184,6 @@ var BARALHO = {
       "Qual cantora lançou a música Shake It Off?|Taylor Swift|Katy Perry|Adele|Lady Gaga",
       "Qual monstro verde explode no Minecraft?|Creeper|Zumbi|Esqueleto|Enderman",
       "Qual jogo tem um ouriço azul superveloz?|Sonic|Mario|Zelda|Pac-Man",
-      "Qual é o nome do peixe-palhaço perdido em Procurando Nemo?|Nemo|Dory|Marlin|Bruce",
       "Qual é o nome do dinossauro roxo de um programa infantil?|Barney|Pernalonga|Elmo|Tinky Winky",
       "Qual super-herói de capa vermelha vem do planeta Krypton?|Superman|Batman|Flash|Aquaman",
       "Qual é o mago mais famoso de O Senhor dos Anéis?|Gandalf|Merlin|Dumbledore|Saruman",
@@ -1138,7 +1263,18 @@ var BARALHO = {
       "Qual personagem amarelo dos desenhos mora numa esponja no fundo do mar com seu caracol Gary?|Bob Esponja|Patrick|Lula Molusco|Plankton",
       "Qual é o dragão fúria da noite domesticado pelo jovem Soluço no filme da DreamWorks?|Banguela|Tempestade|Dente-de-Anzol|Batatão",
       "Qual famoso festival de música do Brasil foi criado em 1985 pelo empresário Roberto Medina?|Rock in Rio|Lollapalooza|The Town|Planeta Atlântida",
-      "Qual jogo de computador e console coloca tripulantes espaciais tentando descobrir quem é o impostor?|Among Us|Fall Guys|Roblox|Overcooked"
+      "Qual jogo de computador e console coloca tripulantes espaciais tentando descobrir quem é o impostor?|Among Us|Fall Guys|Roblox|Overcooked",
+      "Qual personagem da Disney tem uma lâmpada mágica?|Aladdin|Simba|Mulan|Hércules",
+      "Qual dupla sertaneja cantou Evidências?|Chitãozinho e Xororó|Zezé Di Camargo e Luciano|Jorge e Mateus|Leandro e Leonardo",
+      "Qual desenho tem Pernalonga e Patolino?|Looney Tunes|Tom e Jerry|Os Simpsons|Scooby-Doo",
+      "Qual cachorro desenhado resolve mistérios com sua turma?|Scooby-Doo|Pluto|Snoopy|Rex",
+      "Qual é o nome do dono do cachorro Snoopy?|Charlie Brown|Calvin|Bob|Linus",
+      "Qual herói é conhecido como Homem-Morcego?|Batman|Superman|Flash|Arqueiro Verde",
+      "Qual personagem da Turma da Mônica adora melancia?|Magali|Mônica|Marina|Milena",
+      "Qual personagem da Turma da Mônica não gosta de tomar banho?|Cascão|Cebolinha|Chico Bento|Xaveco",
+      "Qual personagem da Turma da Mônica troca o R pelo L?|Cebolinha|Cascão|Chico Bento|Jotalhão",
+      "Qual personagem da Turma da Mônica é um garoto caipira?|Chico Bento|Zé Vampiro|Louco|Nimbus",
+      "Qual coelhinho de pelúcia pertence à Mônica?|Sansão|Floquinho|Bidu|Mingau"
     ],
     m: [
       "Quem dirigiu a trilogia O Senhor dos Anéis?|Peter Jackson|George Lucas|Steven Spielberg|Christopher Nolan",
@@ -1200,7 +1336,16 @@ var BARALHO = {
       "Qual banda britânica de rock progressivo lançou os conceituados álbuns 'The Wall' e 'Wish You Were Here'?|Pink Floyd|Genesis|Yes|King Crimson",
       "Qual famoso festival de música norte-americano de 1969 reuniu quase meio milhão de jovens sob o lema 'Paz e Música'?|Festival de Woodstock|Monterey Pop Festival|Isle of Wight|Altamont",
       "Qual diretora de cinema se tornou a primeira mulher a vencer o Oscar de Melhor Direção por 'Guerra ao Terror'?|Kathryn Bigelow|Jane Campion|Chloé Zhao|Greta Gerwig",
-      "Qual jogo de RPG ocidental criado pela CD Projekt Red acompanha as aventuras do bruxo caçador de monstros Geralt de Rívia?|The Witcher 3: Wild Hunt|Skyrim|Dragon Age|Dark Souls"
+      "Qual jogo de RPG ocidental criado pela CD Projekt Red acompanha as aventuras do bruxo caçador de monstros Geralt de Rívia?|The Witcher 3: Wild Hunt|Skyrim|Dragon Age|Dark Souls",
+      "Qual atriz interpretou a Mulher-Maravilha nos filmes recentes?|Gal Gadot|Margot Robbie|Scarlett Johansson|Brie Larson",
+      "Qual filme animado tem o macaco Rafiki e o vilão Scar?|O Rei Leão|Tarzan|Mogli|Madagascar",
+      "Qual ator interpretou Jack Dawson em Titanic?|Leonardo DiCaprio|Brad Pitt|Matt Damon|Johnny Depp",
+      "Qual cantor britânico lançou o álbum Divide, em 2017?|Ed Sheeran|Harry Styles|Sam Smith|Shawn Mendes",
+      "Qual é o robô dourado amigo de R2-D2 em Star Wars?|C-3PO|BB-8|WALL-E|Baymax",
+      "Qual filme de animação tem o astronauta de brinquedo Buzz Lightyear?|Toy Story|Carros|Monstros S.A.|Up",
+      "Qual filme da Pixar mostra as emoções dentro da cabeça de uma menina?|Divertida Mente|Up|Soul|Luca",
+      "Qual cantora brasileira ficou conhecida como a Pequena Notável?|Carmen Miranda|Elis Regina|Clara Nunes|Gal Costa",
+      "Qual série mostra os irmãos Winchester caçando monstros?|Supernatural|Lost|Dark|Arrow"
     ],
     h: [
       "Qual filme ganhou o primeiro Oscar de Melhor Filme?|Wings (Asas)|Metropolis|Aurora|O Cantor de Jazz",
@@ -1228,11 +1373,11 @@ var BARALHO = {
       "Qual diretor italiano do neorrealismo dirigiu a emocionante obra-prima 'Ladrões de Bicicleta' em 1948?|Vittorio De Sica|Federico Fellini|Roberto Rossellini|Luchino Visconti",
       "Qual cineasta francês foi um dos maiores expoentes da Nouvelle Vague e dirigiu 'Acossado' e 'O Desprezo'?|Jean-Luc Godard|François Truffaut|Claude Chabrol|Éric Rohmer",
       "Qual filme de suspense psicológico de 1958 dirigido por Alfred Hitchcock popularizou o efeito ótico de 'dolly zoom'?|Um Corpo que Cai (Vertigo)|Janela Indiscreta|Pássaros|Festim Diabólico",
-      "Qual lendário compositor italiano criou temas inesquecíveis para filmes de faroeste como 'Três Homens em Conflito' e 'Cinema Paradiso'?|Ennio Morricone|Nino Rota|Henry Mancini|Lalo Schifrin",
+      "Qual lendário compositor italiano criou temas inesquecíveis para filmes como 'Três Homens em Conflito' e 'Cinema Paradiso'?|Ennio Morricone|Nino Rota|Henry Mancini|Lalo Schifrin",
       "Qual atriz estrelou o clássico 'Bonequinha de Luxo' (Breakfast at Tiffany's) no papel da sofisticada Holly Golightly?|Audrey Hepburn|Grace Kelly|Marilyn Monroe|Elizabeth Taylor",
       "Qual compositor de trilhas sonoras alemão venceu o Oscar por 'O Rei Leão' e 'Duna'?|Hans Zimmer|Alan Silvestri|James Horner|Danny Elfman",
       "Qual cineasta sueco explorou questões de fé e morte em clássicos como 'O Sétimo Selo' e 'Morangos Silvestres'?|Ingmar Bergman|Lars von Trier|Andrei Tarkovsky|Carl Theodor Dreyer",
-      "Qual filme de drama histórico mudo de 1927 dirigido pelo alemão Fritz Lang é um marco do expressionismo?|Metropolis|O Gabinete do Dr. Caligari|Nosferatu|M, o Vampiro de Dusseldorf",
+      "Qual filme de ficção científica mudo de 1927 dirigido pelo alemão Fritz Lang é um marco do expressionismo?|Metropolis|O Gabinete do Dr. Caligari|Nosferatu|M, o Vampiro de Dusseldorf",
       "Qual diretor mexicano venceu dois Oscars consecutivos de Melhor Diretor por 'Birdman' e 'O Regresso'?|Alejandro González Iñárritu|Alfonso Cuarón|Guillermo del Toro|Emmanuel Lubezki",
       "Qual filme policial clássico de 1974 dirigido por Roman Polanski é estrelado por Jack Nicholson como o detetive J.J. Gittes?|Chinatown|O Franco Atirador|Operação França|Os Intocáveis",
       "Qual artista gravou em 1959 o álbum 'Kind of Blue', o disco de jazz mais vendido e influente da história?|Miles Davis|John Coltrane|Thelonious Monk|Charlie Parker",
@@ -1242,7 +1387,11 @@ var BARALHO = {
       "Qual cineasta norte-americano dirigiu 'Apocalypse Now', obra que teve filmagens caóticas na selva das Filipinas?|Francis Ford Coppola|Martin Scorsese|Michael Cimino|William Friedkin",
       "Qual clássico musical de 1952 estrelado e codirigido por Gene Kelly celebra a transição do cinema mudo para o falado?|Cantando na Chuva|Sinfonia de Paris|Amor, Sublime Amor|Sete Noivas para Sete Irmãos",
       "Qual diretor russo de cinema lírico e filosófico dirigiu 'Solaris', 'O Espelho' e 'Stalker'?|Andrei Tarkovsky|Serguei Eisenstein|Elem Klimov|Alexander Sokurov",
-      "Qual célebre ator e diretor de cinema mudo criou o personagem Carlitos (O Vagabundo) e dirigiu 'Tempos Modernos'?|Charles Chaplin|Buster Keaton|Harold Lloyd|Stan Laurel"
+      "Qual célebre ator e diretor de cinema mudo criou o personagem Carlitos (O Vagabundo) e dirigiu 'Tempos Modernos'?|Charles Chaplin|Buster Keaton|Harold Lloyd|Stan Laurel",
+      "Qual filme de Christopher Nolan se passa em sonhos dentro de sonhos?|A Origem|Interestelar|Dunkirk|Tenet",
+      "Quem dirigiu O Iluminado, de 1980?|Stanley Kubrick|Alfred Hitchcock|Steven Spielberg|David Lynch",
+      "Qual filme de Charles Chaplin, de 1940, faz sátira a Hitler?|O Grande Ditador|Tempos Modernos|O Garoto|Luzes da Cidade",
+      "Qual filme de Steven Spielberg, de 1993, conta a história de Oskar Schindler?|A Lista de Schindler|O Resgate do Soldado Ryan|Munique|Amistad"
     ]
   },
   bib: {
@@ -1346,7 +1495,18 @@ var BARALHO = {
       "Qual mãe colocou seu bebê em um cesto de juncos no Rio Nilo para salvá-lo da morte?|Joquebede|Miriã|Sara|Ana",
       "Qual o nome do monte onde a arca de Noé repousou após as águas do dilúvio baixarem?|Monte Ararate|Monte Sinai|Monte Carmelo|Monte Nebo",
       "Qual rei ordenou que o menino Jesus e as crianças de Belém fossem mortos?|Herodes, o Grande|Herodes Antipas|César Augusto|Tibério",
-      "Qual evangelista escreveu o Evangelho que relata em detalhes o cântico de Maria (Magnificat)?|Lucas|Marcos|Mateus|João"
+      "Qual evangelista escreveu o Evangelho que relata em detalhes o cântico de Maria (Magnificat)?|Lucas|Marcos|Mateus|João",
+      "Qual era o nome do pai de Jesus na terra?|José|Davi|Zacarias|Simeão",
+      "Qual animal Jesus montou ao entrar em Jerusalém?|Um jumentinho|Um cavalo|Um camelo|Um boi",
+      "Qual cego de Jericó foi curado por Jesus?|Bartimeu|Zaqueu|Lázaro|Nicodemos",
+      "Quem vendeu o direito de primogenitura por um prato de lentilhas?|Esaú|Jacó|Isaque|Ismael",
+      "Quem lutou com um anjo e recebeu o nome Israel?|Jacó|Isaque|Esaú|José",
+      "Para qual cidade Deus enviou Jonas para pregar?|Nínive|Babilônia|Jericó|Sodoma",
+      "Quem enterrou Jesus em seu próprio túmulo novo?|José de Arimateia|Nicodemos|Pedro|João",
+      "Qual é o menor versículo da Bíblia em português?|Jesus chorou|Orai sem cessar|Deus é amor|Alegrai-vos",
+      "Como se chamava a mãe de João Batista?|Isabel|Ana|Maria|Marta",
+      "Como se chama o jardim onde Jesus orou antes de ser preso?|Getsêmani|Éden|Betânia|Siloé",
+      "Em qual cidade Jesus transformou água em vinho?|Caná|Belém|Nazaré|Jericó"
     ],
     m: [
       "Quantos livros tem a Bíblia, somando Antigo e Novo Testamento?|66|73|39|27",
@@ -1386,7 +1546,6 @@ var BARALHO = {
       "Qual casal morreu depois de mentir sobre uma oferta, em Atos 5?|Ananias e Safira|Áquila e Priscila|Zacarias e Isabel|Elcana e Ana",
       "Qual comerciante de púrpura foi a primeira convertida de Paulo em Filipos?|Lídia|Dorcas|Priscila|Febe",
       "Para quem Paulo escreveu sobre o escravo fugitivo Onésimo?|Filemom|Tito|Timóteo|Efésios",
-      "Qual livro reúne provérbios atribuídos a Salomão?|Provérbios|Eclesiastes|Cantares|Salmos",
       "Qual livro diz \"vaidade de vaidades, tudo é vaidade\"?|Eclesiastes|Provérbios|Jó|Cantares",
       "Qual profeta foi chamado por Deus ainda menino, no templo?|Samuel|Jeremias|Isaías|Eliseu",
       "O que Jacó viu em sonho em Betel?|Uma escada com anjos|Uma sarça ardente|Uma arca|Um carro de fogo",
@@ -1408,7 +1567,18 @@ var BARALHO = {
       "Qual cidade foi poupada da destruição após a pregação arrependida promovida por Jonas?|Nínive|Tiro|Sidom|Damasco",
       "Quem era a mãe de Salomão que foi mulher de Urias antes de se casar com Davi?|Bate-Seba|Abigail|Mical|Ainoã",
       "Qual discípulo acompanhou Paulo em sua primeira viagem missionária e era primo de Marcos?|Barnabé|Silas|Lucas|Apolo",
-      "Qual livro profético do Antigo Testamento narra a visão de quatro seres viventes com quatro rostos e rodas cheias de olhos?|Ezequiel|Daniel|Isaías|Zacarias"
+      "Qual livro profético do Antigo Testamento narra a visão de quatro seres viventes com quatro rostos e rodas cheias de olhos?|Ezequiel|Daniel|Isaías|Zacarias",
+      "Qual profeta viu uma roda dentro de uma roda?|Ezequiel|Isaías|Daniel|Jeremias",
+      "Qual mulher escondeu os espias de Israel em Jericó?|Raabe|Rute|Ester|Débora",
+      "Quem foi o primeiro sumo sacerdote de Israel, irmão de Moisés?|Arão|Josué|Eleazar|Corá",
+      "Quem era o pai do profeta Samuel?|Elcana|Eli|Saul|Jessé",
+      "Em qual cidade vivia Zaqueu?|Jericó|Belém|Nazaré|Cafarnaum",
+      "Como se chamava a sogra de Rute?|Noemi|Sara|Raquel|Lia",
+      "Quem foi o último juiz de Israel?|Samuel|Sansão|Eli|Gideão",
+      "Qual sumo sacerdote criou o menino Samuel?|Eli|Arão|Zadoque|Abiatar",
+      "Em qual cidade Paulo e Silas foram presos e houve um terremoto?|Filipos|Éfeso|Corinto|Atenas",
+      "Quantas cartas de Paulo o Novo Testamento protestante tem?|13|7|14|21",
+      "Qual profeta é conhecido como o profeta chorão?|Jeremias|Isaías|Ezequiel|Daniel"
     ],
     h: [
       "Qual profeta ungiu Davi como rei?|Samuel|Natã|Elias|Eliseu",
@@ -1444,14 +1614,18 @@ var BARALHO = {
       "Qual profeta do Antigo Testamento profetizou especificamente que o Messias nasceria em Belém de Efrata?|Miqueias|Malaquias|Zacarias|Oséias",
       "Qual é o menor livro do Novo Testamento em quantidade de versículos?|2 João|3 João|Filemom|Judas",
       "Qual sumo sacerdote presidiu o julgamento judaico que condenou Jesus antes de entregá-lo a Pilatos?|Caifás|Anás|Gamaliel|Ananias",
-      "Qual profeta do Antigo Testamento foi engolido pela terra após liderar uma rebelião contra Moisés e Arão?|Corá|Datã|Abirão|Balaão",
+      "Qual levita foi engolido pela terra após liderar uma rebelião contra Moisés e Arão?|Corá|Datã|Abirão|Balaão",
       "Qual rei de Judá foi ferido com lepra na testa por tentar queimar incenso no templo reservado aos sacerdotes?|Uzias|Acaz|Manassés|Amom",
       "Qual patriarca bíblico foi abençoado e deu os dízimos a Melquisedeque, rei de Salém?|Abraão|Isaque|Jacó|Noé",
-      "Qual discípulo substituiu Judas Iscariotes após sorteio realizado pelos apóstolos em Atos 1?|Matias|José Barsabás|Barsabás|Barnabé",
       "Qual concílio ecumênico da igreja primitiva em 325 d.C. combateu o arianismo e definiu a divindade de Cristo?|Concílio de Niceia|Concílio de Constantinopla|Concílio de Éfeso|Concílio de Calcedônia",
       "Qual imperador persa autorizou os judeus a retornarem a Jerusalém e reconstruírem o templo em 538 a.C.?|Ciro, o Grande|Dario I|Artaxerxes I|Xerxes I",
-      "Qual livro do Antigo Testamento narra a destruição iminente da cidade de Nínive quase um século após Jonas?|Naum|Habacuque|Sofonias|Obadias"
+      "Qual livro do Antigo Testamento anuncia a queda de Nínive, tempos depois da pregação de Jonas?|Naum|Habacuque|Sofonias|Obadias",
+      "Qual profeta menor escreveu sobre o derramamento do Espírito, citado em Pentecostes?|Joel|Amós|Obadias|Naum",
+      "Qual rei de Judá reinou 55 anos, o reinado mais longo, e foi muito mau?|Manassés|Josias|Ezequias|Acaz",
+      "Qual profeta anunciou que a virgem conceberia e daria à luz um filho?|Isaías|Jeremias|Miqueias|Oseias",
+      "Qual reformador suíço liderou a Reforma em Zurique?|Ulrico Zuínglio|João Calvino|Martinho Lutero|John Knox",
+      "Qual lema da Reforma significa somente a fé?|Sola Fide|Sola Scriptura|Sola Gratia|Solus Christus",
+      "Qual teólogo holandês deu nome ao arminianismo?|Jacó Armínio|João Calvino|Teodoro de Beza|Erasmo de Roterdã"
     ]
   }
 };
-
