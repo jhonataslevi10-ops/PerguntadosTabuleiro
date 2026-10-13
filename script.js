@@ -50,6 +50,12 @@ let catsAtivas = CATS_BASE.slice();
 let anguloAtual = 0;
 let aGirar      = false;
 
+/* Bônus e controle de cartas */
+let respondido     = false;
+let duplaAtiva     = false;
+let bonusUsados    = {};
+let vistas         = [];   // cartas já mostradas (evita perguntas que entregam a resposta de outra)
+
 /* =========================================================
    TELAS
    ========================================================= */
@@ -63,9 +69,10 @@ function mostrar(id) {
   });
 
   const areaRoleta = document.querySelector(".area-roleta");
-  const toggleArea = document.querySelector(".toggle");
   if (areaRoleta) areaRoleta.style.display = id === "t1" ? "flex"  : "none";
-  if (toggleArea) toggleArea.style.display = id === "t1" ? "flex"  : "none";
+  document.querySelectorAll(".toggle").forEach((t) => {
+    t.style.display = id === "t1" ? "flex" : "none";
+  });
 }
 
 /* =========================================================
@@ -260,6 +267,26 @@ function girarRoleta() {
 /* =========================================================
    PERGUNTAS
    ========================================================= */
+function normTxt(s) {
+  return " " + s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-z0-9]+/g, " ").trim() + " ";
+}
+
+function prepararCarta(linha) {
+  const p = linha.split("|");
+  return { nq: normTxt(p[0]), na: normTxt(p[1]).trim() };
+}
+
+// a pergunta de "a" menciona a resposta de "b"?
+function entrega(a, b) {
+  if (b.na.length < 4 || /^\d+$/.test(b.na)) return false;
+  return a.nq.indexOf(" " + b.na + " ") > -1;
+}
+
+function conflita(a, b) {
+  return entrega(a, b) || entrega(b, a);
+}
+
 function cartaLocal() {
   if (typeof BARALHO === "undefined" || !BARALHO[catAtual.id] || !BARALHO[catAtual.id][nivelAtual]) {
     console.error("Baralho não encontrado para", catAtual.id, nivelAtual);
@@ -281,10 +308,19 @@ function cartaLocal() {
     if (usadas[chave].indexOf(k) === -1) livres.push(k);
   }
 
-  const escolhida = livres[Math.floor(Math.random() * livres.length)];
+  // Evita cartas que revelam a resposta de outra já mostrada (e vice-versa)
+  const candidatas = livres.filter((k) => {
+    const c = prepararCarta(baralho[k]);
+    return !vistas.some((v) => conflita(c, v));
+  });
+  const pool = candidatas.length ? candidatas : livres;
+
+  const escolhida = pool[Math.floor(Math.random() * pool.length)];
   usadas[chave].push(escolhida);
 
   const p = baralho[escolhida].split("|");
+  vistas.push(prepararCarta(baralho[escolhida]));
+  if (vistas.length > 60) vistas.shift();   // só as últimas cartas importam
   return { q: p[0], certaTxt: p[1], erradas: p.slice(2), api: false };
 }
 
@@ -304,6 +340,8 @@ function sortearCarta() {
 function mostrarCarta(c) {
   const alternativas = embaralhar(c.erradas.concat([c.certaTxt]));
   cartaAtual = { certa: alternativas.indexOf(c.certaTxt) };
+  respondido = false;
+  duplaAtiva = false;
 
   const tagCat3  = $("tagCat3");
   const tagNivel = $("tagNivel");
@@ -333,27 +371,44 @@ function mostrarCarta(c) {
     });
     ops.appendChild(o);
   });
+
+  atualizarBarraBonus();
 }
 
 function responder(escolha) {
   const ops = $("ops");
-  if (!ops || !cartaAtual) return;
+  if (!ops || !cartaAtual || respondido) return;
 
   const botoes = ops.querySelectorAll(".op");
-  botoes.forEach((b, i) => {
-    b.disabled = true;
-    if (i === cartaAtual.certa) b.classList.add("certa");
-  });
+  const aviso  = $("aviso");
 
-  const aviso = $("aviso");
   if (escolha === cartaAtual.certa) {
+    respondido = true;
+    botoes.forEach((b) => { b.disabled = true; });
+    botoes[escolha].classList.add("certa");
     if (aviso) {
       aviso.innerText = "ACERTOU! Avance sua peça no tabuleiro.";
       aviso.className = "ok";
     }
     falar("Mandou bem!", "feliz");
   } else {
-    if (botoes[escolha]) botoes[escolha].classList.add("errada");
+    // errou: marca só a escolhida, sem mostrar a resposta certa
+    botoes[escolha].classList.add("errada");
+    botoes[escolha].disabled = true;
+
+    if (duplaAtiva) {
+      duplaAtiva = false;
+      if (aviso) {
+        aviso.innerText = "CHANCE DUPLA! Essa não era. Tente de novo.";
+        aviso.className = "dupla";
+      }
+      falar("Tente de novo!", "neutro");
+      atualizarBarraBonus();
+      return;
+    }
+
+    respondido = true;
+    botoes.forEach((b) => { b.disabled = true; });
     if (aviso) {
       aviso.innerText = "ERROU! Passe a vez para o próximo jogador.";
       aviso.className = "no";
@@ -365,6 +420,108 @@ function responder(escolha) {
   const proximo = $("proximo");
   if (outra)   outra.style.display   = "block";
   if (proximo) proximo.style.display = "block";
+  atualizarBarraBonus();
+}
+
+/* =========================================================
+   BÔNUS
+   ========================================================= */
+const BONUS = [
+  { id: "tiro",   icone: "🎯", nome: "Tiro extra",   dica: "Gire a roleta novamente" },
+  { id: "passar", icone: "⏭️", nome: "Passar",       dica: "Troque por outra pergunta da mesma categoria" },
+  { id: "dupla",  icone: "✌️", nome: "Chance dupla", dica: "Se errar, tente responder de novo" },
+  { id: "bomba",  icone: "💣", nome: "Bomba",        dica: "Elimina duas respostas incorretas" }
+];
+
+function bonusLigado() {
+  const t = $("toggleBonus");
+  return !!(t && t.checked);
+}
+
+function resetarBonus() {
+  bonusUsados = {};
+  duplaAtiva  = false;
+}
+
+function criarControlesBonus() {
+  // opção "Ligar bônus" ao lado da opção da Bíblia
+  if (!$("toggleBonus")) {
+    const lbl = document.createElement("label");
+    lbl.className = "toggle";
+    lbl.innerHTML = '<input type="checkbox" id="toggleBonus"> Ligar bônus';
+    const ref = $("toggleBiblia") ? $("toggleBiblia").closest("label") : null;
+    if (ref) ref.insertAdjacentElement("afterend", lbl);
+    else if ($("t1")) $("t1").parentNode.insertBefore(lbl, $("t1"));
+  }
+
+  // barra de bônus na tela de perguntas
+  if (!$("barraBonus") && $("ops")) {
+    const barra = document.createElement("div");
+    barra.id = "barraBonus";
+    barra.className = "barra-bonus";
+    BONUS.forEach((b) => {
+      const btn = document.createElement("button");
+      btn.className = "bonus-btn";
+      btn.setAttribute("data-bonus", b.id);
+      btn.title = b.dica;
+      btn.innerHTML = "<span>" + b.icone + "</span>" + b.nome;
+      btn.addEventListener("click", () => usarBonus(b.id));
+      barra.appendChild(btn);
+    });
+    $("ops").parentNode.insertBefore(barra, $("ops"));
+  }
+
+  const t = $("toggleBonus");
+  if (t) t.addEventListener("change", atualizarBarraBonus);
+}
+
+function atualizarBarraBonus() {
+  const barra = $("barraBonus");
+  if (!barra) return;
+  barra.style.display = (bonusLigado() && !respondido) ? "grid" : "none";
+  barra.querySelectorAll(".bonus-btn").forEach((btn) => {
+    const id = btn.getAttribute("data-bonus");
+    btn.disabled = !!bonusUsados[id] || respondido;
+    btn.classList.toggle("ativo", id === "dupla" && duplaAtiva);
+  });
+}
+
+function usarBonus(id) {
+  if (respondido || bonusUsados[id] || aGirar) return;
+
+  if (id === "tiro") {
+    bonusUsados.tiro = true;
+    mascoteCat = null;
+    mostrar("t1");
+    falar("Tiro extra! Girando de novo...", "feliz");
+    setTimeout(girarRoleta, 400);
+    return;
+  }
+
+  if (id === "passar") {
+    bonusUsados.passar = true;
+    sortearCarta();            // outra pergunta da mesma categoria e nível
+    return;
+  }
+
+  if (id === "dupla") {
+    bonusUsados.dupla = true;
+    duplaAtiva = true;
+    falar("Chance dupla ligada!", "feliz");
+  }
+
+  if (id === "bomba") {
+    bonusUsados.bomba = true;
+    const botoes = Array.from($("ops").querySelectorAll(".op"));
+    const erradas = botoes.filter((b, i) => i !== cartaAtual.certa && !b.disabled);
+    embaralhar(erradas).slice(0, 2).forEach((b) => {
+      b.disabled = true;
+      b.classList.add("eliminada");
+    });
+    falar("Bomba! Duas respostas eliminadas.", "feliz");
+  }
+
+  atualizarBarraBonus();
 }
 
 /* =========================================================
@@ -395,11 +552,17 @@ function ligarEventos() {
   }
 
   const outra = $("outra");
-  if (outra) outra.addEventListener("click", sortearCarta);
+  if (outra) {
+    outra.addEventListener("click", () => {
+      resetarBonus();
+      sortearCarta();
+    });
+  }
 
   const proximo = $("proximo");
   if (proximo) {
     proximo.addEventListener("click", () => {
+      resetarBonus();
       mascoteCat = null;
       falar("Próximo jogador! Escolha a categoria.", "feliz");
       mostrar("t1");
@@ -416,6 +579,9 @@ function ligarEventos() {
    INICIALIZAÇÃO
    ========================================================= */
 function init() {
+  const tb = $("toggleBiblia");
+  if (tb) tb.checked = false;       // perguntas bíblicas começam desligadas
+  criarControlesBonus();
   ligarEventos();
   atualizarCategoriasAtivas();
   mostrar("t1");
